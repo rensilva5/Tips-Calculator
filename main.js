@@ -15,12 +15,12 @@ const updateDiscountValue = document.querySelector(".discount-value");
 
 // Function to update discount value adjusting the sliders
 discountPercentage.addEventListener("input", () => {
-  discountPercentageValue.textContent = discountPercentage.value + "%"
+  discountPercentageValue.textContent = discountPercentage.value + "%";
 });
 
 // Function to update tips value when adjusting the sliders
 tipsPercentage.addEventListener("input", () => {
-  totalTipPercentageValue.textContent = tipsPercentage.value + "%"
+  totalTipPercentageValue.textContent = tipsPercentage.value + "%";
 });
 
 // Function to update number of customers adjusting the sliders
@@ -35,16 +35,18 @@ function calculateBill() {
   const customers = parseFloat(noOfCustomers.value);
   // const AmountPerCustomer = parseFloat(eachCustomerToPay.value);
 
-  const billAmountAfterDiscountPercentage = bill - (discount * bill) / 100;
+  const billAfterDiscount = bill - (discount * bill) / 100;
+  console.log(billAfterDiscount)
 
   const getTipAmount = (bill * tips) / 100;
 
-  const totalBill = bill + getTipAmount;
+  const totalBill = billAfterDiscount + getTipAmount;
 
   const eachCustomerToPayAmount = totalBill / customers;
 
   totalTipPaid.textContent = getTipAmount;
   totalAmountToPay.textContent = totalBill;
+  discountPercentage.textContent = billAfterDiscount;
   totalTipPercentageValue.textContent = tipsPercentage.value;
   discountPercentageValue.textContent = discountPercentage.value;
   totalNoOfCustomersValue.textContent = noOfCustomers.value;
