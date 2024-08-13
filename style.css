@@ -1,0 +1,124 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4a90e2;
+}
+
+.form-wrapper,
+.input-wrapper {
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="number"],
+input[type="range"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="range"] {
+  appearance: none;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4a90e2;
+}
+
+button.generate-bill {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button.generate-bill:hover {
+  background-color: #357ab8;
+}
+
+div > label:first-child {
+  font-weight: bold;
+}
+
+div > label:last-child {
+  font-size: 1.2rem;
+  color: #4a90e2;
+  display: flex;
+  /* margin-left: 10px; */
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+div {
+  margin-top: 10px;
+}
+
+.total-tip-paid,
+.total-amount-to-pay,
+.each-customer-to-pay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  button.generate-bill {
+    font-size: 1rem;
+  }
+
+  div > label:last-child {
+    font-size: 1rem;
+  }
+}
