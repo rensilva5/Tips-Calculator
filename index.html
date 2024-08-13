@@ -12,21 +12,52 @@
       <label for="bill-amount">Bill amount</label>
       <input
         id="bill-amount"
+        type="number"
         class="bill-amount"
-        placeholder="Enter bill-amount"
+        placeholder="Enter bill Amount"
       />
     </div>
     <div class="input-wrapper">
       <label for="discount-percentage">Discount Percentage</label>
-      <input type="range" min="0" max="50" id="discount-percentage" />
+      ,<label class="discount-value">0</label>
+      <input
+        class="discount-percentage"
+        type="range"
+        min="0"
+        max="50"
+        id="discount-percentage"
+      />
     </div>
     <div class="input-wrapper">
-      <label for="tip-percentage">Tips Percentage</label>
-      <input type="range" min="0" max="60" id="tip-percentage" />
+      <label for="tips-percentage">Tips Percentage</label>
+      ,<label class="tip-value">0</label>
+      <input
+        class="tips-percentage"
+        type="range"
+        min="0"
+        max="60"
+        id="tips-percentage"
+      />
     </div>
     <div class="input-wrapper">
-      <label for="no-of-customer">No of Customers</label>
-      <input type="range" min="0" max="30" id="no-of-customer" />
+      <label for="no-of-customers">No of Customers</label>
+      ,<label class="no-of-customers-value">0</label>
+      <input
+        class="no-of-customers"
+        type="range"
+        min="0"
+        max="30"
+        id="no-of-customers"
+      />
+    </div>
+    <button class="generate-bill">Generate bill</button>
+    <div>
+      <label type="number">Total Tip Paid :</label>
+      <label type="number" class="total-tip-paid">0</label>
+    </div>
+    <div>
+      <label type="number">Total Amount to pay:</label>
+      <label type="number" class="total-amount-to-pay">0</label>
     </div>
     <script src="main.js"></script>
   </body>
